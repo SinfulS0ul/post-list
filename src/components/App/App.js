@@ -10,8 +10,6 @@ class App extends Component {
     keyword: ""
   };
 
-  textInput = React.createRef();
-
   displayMorePosts = () => {
     this.setState({ maxPosts: this.state.maxPosts + 10 });
   };
@@ -33,10 +31,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar
-          textInput={this.textInput}
-          handleInputChange={this.handleInputChange}
-        />
+        <SearchBar handleInputChange={this.handleInputChange} />
         <PostList
           posts={this.state.posts}
           maxPosts={this.state.maxPosts}

@@ -6,7 +6,6 @@ export const SearchBar = props => {
       autoComplete="off"
       placeholder="Type a keyword"
       onChange={props.handleInputChange}
-      ref={props.textInput}
     />
   );
 };
